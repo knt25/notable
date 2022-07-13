@@ -1,8 +1,8 @@
-#About
+# About
 
 Notable take home project
 
-##Run virtual environment:
+## Run virtual environment:
 
 Windows:
 ```bash
@@ -14,18 +14,19 @@ Unix/MacOS:
 . env/bin/activate
 ```
 
-##Download requirements:
+## Download requirements:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-##Run application:
+## Run application:
 
 ```bash
 flask run
 ```
 
-##Open application
+## Open application
 
 http://127.0.0.1:5000 
+
