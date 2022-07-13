@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>NOTABLE</title>
+        <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+			
+		 $('#delete-appt').click(function(){
+			$.ajax({
+                type: "DELETE",
+                url: "/delete-appointments" + '?' + $.param({"deleteID": $("#deleteID").val()}),
+                success: function(data) {
+                    alert(data);
+                }
+            });
+		 });
+
+        });
+    </script>
+    </head>
+    <body>
+        <a href="/get-doctors">
+            See Doctors!
+        </a>
+
+        <br><br>
+
+        <form action="/get-appointments" method="GET">
+            <label for="doctorID">Doctor ID:</label><br>
+            <input required type="number" id="doctorID" name="doctorID"><br>
+            <label for="date">Date:</label><br>
+            <input required type="date" id="date" name="date">
+            <input type="submit" value="Get Appointments" />
+        </form>
+
+        <br><br>
+
+        <form action="" method="delete" >
+            <label for="deleteID">Appointment ID:</label><br>
+            <input required type="number" id="deleteID" />
+            <input type="submit" id="delete-appt" value="Delete Appointment" />
+        </form>
+
+        <br><br>
+
+        <form action="/post-appointments" method="POST">
+            <label for="fname">First Name:</label><br>
+            <input required type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input required type="text" id="lname" name="lname"><br>
+            <label for="date">Date:</label><br>
+            <input required type="date" id="date" name="date"><br>
+            <label for="time">Time:</label><br>
+            <input required type="time" id="time" name="time"><br>
+            <label for="kind">Kind:</label><br>
+            <select id="kind" name="kind">
+                <option value="New Patient">New Patient</option>
+                <option value="Follow-up">Follow-up</option>
+              </select><br>
+            <label for="doctorID">Doctor ID:</label><br>
+            <input required type="number" id="doctorID" name="doctorID"><br>
+
+            <input type="submit" value="Create Appointment" />
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,6 @@
+ID,patient_first,patient_last,date,time,kind,doctorID
+0,Sterling,Archer,2022-07-12,08:00,New Patient,0
+1,Cyril,Figis,2022-07-12,08:30,Follow-up,1
+2,Ray,Gilette,2022-07-12,09:00,New Patient,1
+3,Lana,Kane,2022-07-12,08:00,Follow-up,2
+4,Pam,Poovey,2022-07-12,11:30,New Patient,2

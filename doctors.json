@@ -1,0 +1,17 @@
+{
+    "doctors": [
+        {   "ID": 0,
+            "first": "Julius",
+            "last": "Hibbert"
+        },
+        {
+            "ID": 1,
+            "first": "Algernop",
+            "last": "Krieger"
+        },
+        {   "ID": 2,
+            "first": "Nick",
+            "last": "Riviera"
+        }
+    ]
+}
